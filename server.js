@@ -27,4 +27,9 @@ app.get('/jade/:str', function (request, response) {
   //  var testStr = request.params.str;
     response.render('index.ejs' );
 });
+
+
+
+
+
 app.listen(18080);
