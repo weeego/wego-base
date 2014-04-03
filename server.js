@@ -4,11 +4,13 @@ var app = express();
 app.configure(function(){
     app.set('port', 18080);
     app.set('views', __dirname + '/views');
+    app.use(express.static(__dirname + '/public'));
     app.use(express.bodyParser());
     app.use(express.methodOverride());
     app.use(express.cookieParser('expressdemo'));
     app.use(express.session());
     app.use(app.router);
+
     app.use(express.errorHandler());
 });
  
