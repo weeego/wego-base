@@ -23,7 +23,7 @@ app.get('/jade/:str', function (request, response) {
     var testStr = request.params.str;
     response.render('jadetest.jade', {title: testStr});
 });
- app.get('/index', function (request, response) {
+ app.get('/', function (request, response) {
   //  var testStr = request.params.str;
     response.render('index.ejs' );
 });
